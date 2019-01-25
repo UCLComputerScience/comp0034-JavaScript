@@ -57,6 +57,6 @@ Write JavaScript to alter the dom.html page:
 
 #### Exercise 3 Event handling
 Modify events.html and events.js:
-* Add an event handler to the form so that ```”onsubmit”``` the function ```processForm()``` is executed a new <p> element is added to the end of the page with the email address
-    * Hint: you can access the value of a form field using ```querySelector(‘id’).value;```
+* Add an event handler to the form so that ```”onsubmit”``` the function ```processForm()``` is executed an alert is displayed with the message "Event handler success".
 * Add an event listener so that when the form is submitted an alert is shown that displays the message (“Hello, name ” ), where name is the email address entered in the form
+    * Hint: you can access the value of a form field using ```querySelector(‘id’).value;```
