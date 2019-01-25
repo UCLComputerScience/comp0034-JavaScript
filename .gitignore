@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+/js/exercises.js
+.DS_Store
+.idea/
+css/.DS_Store

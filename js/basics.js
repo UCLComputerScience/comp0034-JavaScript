@@ -1,4 +1,46 @@
-/*var a = 5;
+/* Variables and data types */
+
+var foo;  //undefined
+foo = "bar"; //String
+foo = 'A string containining "quote" marks'; //String
+foo = 16; //Number
+foo = -16.556776876875; //Number
+var isCorrect = true;  //Boolean
+var empty = null; //null
+typeof foo; //returns ‘number’
+
+
+/* Operators */
+
+5 + (2 * 10);
+"Joe" + " " + "Bloggs"; //Using + in an expression with strings concatenates
+//Short hand ways to use operators
+var a = 5;
+a++;   //returns 6
+a += 4;  //returns 10
+a *= 2;   // returns 20
+
+
+/* Condition statements */
+
+var hour = 8;
+if (hour < 12) {
+    alert("Good morning");
+}
+
+var hour = 8;
+if (hour < 12) {
+    alert("Good morning");
+} else if (hour > 18) {
+    alert("Good evening");
+} else {
+    alert("Good afternoon");
+}
+
+
+/* Equals  =   ==   === */
+
+var a = 5;
 var b = 4;
 var result;
 if (a = b) {
@@ -28,6 +70,66 @@ if (a === b) {
 }
 console.log(result);  // outputs false as JavaScript forces the string to be interpreted as a string and not as a number
 
+
+/* Switch */
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+}
+
+/* Loops (for, for in, while, do while) */
+//for
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+//for in
+var book = {
+    author: "John Doe",
+    ISBN: 121212121212,
+    title: "This book"
+};
+var text = "";
+var x;
+for (x in book) {
+    text += book[x];
+}
+//while
+var x = 0;
+while (x < 3) {
+    console.log(x);
+    x++;
+}
+// do while
+var x = 0;
+do {
+    console.log(x);
+    x++;
+} while (x < 3);
+
+
+/* Arrays */
+
 //Create an array using an array literal
 var progMinor = ["comp0015", "comp0034", "comp0035"];
 
@@ -47,10 +149,13 @@ var len = progMinor.length;
 progMinor.pop(); //remove last element
 progMinor.push("COMP0035"); //add elements to the array
 
+
+/* Objects */
 //To define an object with properties
 var student = {
     firstname: "Jo",
-    lastname: "Bloggs"};
+    lastname: "Bloggs"
+};
 
 //A JavaScript object can have properties and methods (called functions in JavaScript)
 var person = {
@@ -69,11 +174,10 @@ console.log(person["lastname"]);
 console.log(person.fullName());
 
 //Function syntax
-function functionName(){
+function functionName() {
     //Code block
 }
 
-*/
 
 //Create an object constructor
 function Person(firstname, lastname, height, dateOfBirth) {
@@ -98,3 +202,50 @@ console.log(person1.firstname); //dot notation
 console.log(person1["height"]);  //bracket notation
 console.log(person1.calculateAge());
 
+
+/* Functions */
+//Refer to exercises.js for examples of named, anonymous and self-invoking functions
+
+
+/* Variable scope */
+//Global variable
+var count = 0;  //Global
+function incr(n) {
+    count += n;
+}
+
+function reset() {
+    count = 0;
+}
+
+incr(4);
+reset();
+incr(2);
+console.log(count);
+
+//Function scope
+function everything() {
+    var count = 0;
+
+    function incr(n) {
+        count += n;
+    }
+
+    function reset() {
+        count = 0;
+    }
+
+    incr(4);
+    reset();
+    incr(2);
+    console.log(count);
+}
+everything();
+
+//Block scope
+if (true) {
+    var x = 2;
+    let y = 2;
+}
+console.log(x);
+console.log(y);  //should give an error that y is undefined
