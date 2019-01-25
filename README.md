@@ -22,8 +22,9 @@ functionName();
 ```
 
 
-#### Exercise 2 Anonymous function
-Create a copy of your solution to exercise 1. Restructure the function so that it is an anonymous function.
+**Optional: Anonymous function**
+
+Create a copy of your solution named function. Restructure the function so that it is an anonymous function.
 
 ```
 //Anonymous function
@@ -34,8 +35,9 @@ var varName = function()
 ```
 
 
-#### Exercise 3 Immediately invoked function
-Create a copy of your solution to exercise 2. Restructure the function so that it is an immediately invoked function.
+**Optional: Immediately invoked function**
+
+Create a copy of your anonymous function. Restructure the function so that it is an immediately invoked function.
 
 ```
 //Immediately invoked function
@@ -45,8 +47,16 @@ function(parameters) {
 var varName = function()                                                            
 ```
 
-#### Exercise 4 DOM
+#### Exercise 2 DOM
 Write JavaScript to alter the dom.html page:
 * Find the 5th paragraph (arrays start at 0) and change the class to ````.text-uppercase ````
-    * Hint:  ````document.querySelectorAll('tagName')[0].className = "styleName";````
+    * Hint:  ```document.querySelectorAll('tagName')[0].className = "styleName";```
 
+* Add a new image ```<img src=”img/logo.jpg" class="rounded”>``` somewhere on the page.
+    * Hint: you can set src and class in the same way as innerHTML
+
+#### Exercise 3 Event handling
+Modify events.html and events.js:
+* Add an event handler to the form so that ```”onsubmit”``` the function ```processForm()``` is executed a new <p> element is added to the end of the page with the email address
+    * Hint: you can access the value of a form field using ```querySelector(‘id’).value;```
+* Add an event listener so that when the form is submitted an alert is shown that displays the message (“Hello, name ” ), where name is the email address entered in the form
