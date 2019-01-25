@@ -4,7 +4,7 @@ Code for the intro to JavaScript lecture.
 
 ####   Exercise 1 Named function
 
-In the java console of a browser, write a function that will find the fraction with the greater decimal value 
+In the javascript console of a browser, write a function that will find the fraction with the greater decimal value 
 from 2 fractions passed as arguments. It should output text to the console to indicate which was greater of the two.
 
 Call your function to test the output.
