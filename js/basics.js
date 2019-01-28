@@ -51,7 +51,7 @@ if (a = b) {
 console.log(result);  // outputs true as a is assigned the value of b
 
 var a = 5;
-var b = "5";
+var b = "4";
 var result;
 if (a == b) {
     result = true;
@@ -61,7 +61,7 @@ if (a == b) {
 console.log(result);  // outputs true as JavaScript recognises the string only contains a number and treats it as a number
 
 var a = 5;
-var b = "5";
+var b = "4";
 var result;
 if (a === b) {
     result = true;
@@ -281,6 +281,10 @@ function everything() {
 everything();
 
 //Block scope
+/*
+Variables declared with the let keyword can have Block Scope, variables declared inside a block {} using let cannot be
+accessed from outside the block, variables inside a block {} using var can be accessed from outside the block.
+ */
 if (true) {
     var x = 2;
     let y = 2;

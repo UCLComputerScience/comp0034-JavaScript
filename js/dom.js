@@ -18,7 +18,7 @@ console.log("Inner HTML: ", myTitleLink.innerHTML);
 
 // Get elements using the HTML tag name
 var myParas = document.getElementsByTagName("p");
-console.log("Paragraphs: ", myLinks.length);
+console.log("Paragraphs: ", myParas.length);
 
 
 
